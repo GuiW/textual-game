@@ -1,10 +1,13 @@
 // Layout
 //
 $header-height: 35px;
+$scene-height: calc(100vh - #{$header-height});
+
 $btn-settings-width: 35px;
 
-// 
+// Colors
 //
+$color-darkest: #1e1e1e;
 
 // Fonts
 //
