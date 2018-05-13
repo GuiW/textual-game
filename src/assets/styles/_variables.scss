@@ -1,15 +1,22 @@
 // Layout
 //
 $header-height: 35px;
-$scene-height: calc(100vh - #{$header-height});
+$actions-panel-height: 160px;
+$scene-height: calc(100vh - #{$header-height} - #{$actions-panel-height});
 
 $btn-settings-width: 35px;
 
 // Colors
 //
 $color-darkest: #1e1e1e;
+$color-lightest: #fff;
 
 // Fonts
 //
 $font-family-base: 'Roboto', arial, sans-serif;
 $font-size-base: 16px;
+
+// Call to action
+//
+$cta-height: 40px;
+$cta-gutter: 5px;

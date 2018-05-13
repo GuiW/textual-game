@@ -1,19 +1,22 @@
 <template>
   <div id='app'>
-    <app-header/>
-    <scene/>
+    <app-header />
+    <scene />
+    <actions-panel />
   </div>
 </template>
 
 <script>
 import header from './components/organism/header.vue'
 import scene from './components/organism/scene.vue'
+import actionsPanel from './components/organism/actions-panel.vue'
 
 export default {
   name: 'App',
   components: {
     'appHeader': header,
     'scene': scene,
+    'actionsPanel': actionsPanel
   }
 }
 </script>
