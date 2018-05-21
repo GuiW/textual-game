@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'header',
+  name: 'app-header',
   data () {
     return {
       title: 'Textual Game'

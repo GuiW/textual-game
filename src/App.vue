@@ -10,6 +10,7 @@
 import header from './components/organism/header.vue'
 import scene from './components/organism/scene.vue'
 import actionsPanel from './components/organism/actions-panel.vue'
+import store from './vuex/AppStore.js'
 
 export default {
   name: 'App',
@@ -17,6 +18,19 @@ export default {
     'appHeader': header,
     'scene': scene,
     'actionsPanel': actionsPanel
+  },
+  store: store,
+  data () {
+    return {
+      scenes: []
+    }
+  },
+  mounted () {
+    this.$http.get('http://localhost/adventure_game//wp-json/wp/v2/scene').then((response) => {
+      this.scenes = response.data
+    }, (error) => {
+      console.log('error', error)
+    })
   }
 }
 </script>
