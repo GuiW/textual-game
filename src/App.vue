@@ -2,32 +2,31 @@
   <div id='app'>
     <app-header />
     <scene />
-    <actions-panel />
+    <control-panel />
   </div>
 </template>
 
 <script>
 import header from './components/organism/header.vue'
 import scene from './components/organism/scene.vue'
-import actionsPanel from './components/organism/actions-panel.vue'
-import store from './vuex/AppStore.js'
+import controlPanel from './components/organism/control-panel.vue'
+import store from '@/vuex/AppStore.js'
 
 export default {
   name: 'App',
   components: {
     'appHeader': header,
     'scene': scene,
-    'actionsPanel': actionsPanel
+    'controlPanel': controlPanel
   },
   store: store,
   data () {
     return {
-      scenes: []
     }
   },
   mounted () {
-    this.$http.get('http://localhost/adventure_game//wp-json/wp/v2/scene').then((response) => {
-      this.scenes = response.data
+    this.$http.get('https://jsonplaceholder.typicode.com/posts/1').then((response) => {
+      console.log('response', response.body)
     }, (error) => {
       console.log('error', error)
     })

@@ -1,5 +1,5 @@
 <template>
-  <div class="actions-panel">
+  <div class="control-panel">
     <ctaContainer :cta-list="togglesPanel" />
     <ctaContainer :cta-list="actions" gutter />
   </div>
@@ -9,7 +9,7 @@
 import ctaContainer from '../molecule/cta-container'
 
 export default {
-  name: 'actions-panel',
+  name: 'control-panel',
   components: {
     'ctaContainer': ctaContainer
   },
@@ -35,7 +35,7 @@ export default {
 <style lang="scss">
 @import '~styles/variables';
 
-.actions-panel {
+.control-panel {
   height: $actions-panel-height;
   background: lightslategrey;
 }
