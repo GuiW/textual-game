@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import VueResource from 'vue-resource'
 import store from './vuex/AppStore'
+import router from './vueRouter/VueRouter'
 
 // Global style
 import './assets/styles/main.scss'
@@ -14,8 +15,7 @@ Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
   store,
-  components: { App },
-  template: '<App/>'
-})
+  router,
+  render: h => h(App)
+}).$mount('#app')
