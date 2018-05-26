@@ -1,15 +1,23 @@
 <template>
-  <div class="cta-container"  v-bind:class="{ 'cta-container--gutter': gutter }">
-    <button class="cta btn" v-for="(cta, index) in ctaList" :key="index">{{cta}}</button>
+  <div class="cta-container" :class="{ 'cta-container--gutter': gutter }">
+    <template v-for="(cta, index) in ctaList">
+      <component :is="cta.type"  :key="index" :cta="cta" />
+    </template>
   </div>
 </template>
 
 <script>
+import routerLink from '@/components/atom/cta-router-link'
+import direction from '@/components/atom/cta-direction'
+
 export default {
-  name: 'cta-container',
   props: {
     gutter: Boolean,
     ctaList: Array
+  },
+  components: {
+    'ctaRouterLink': routerLink,
+    'ctaDirection': direction
   }
 }
 </script>

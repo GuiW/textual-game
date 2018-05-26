@@ -1,32 +1,21 @@
 <template>
   <div class="control-panel">
-    <ctaContainer :cta-list="togglesPanel" />
-    <ctaContainer :cta-list="actions" gutter />
+    <cta-container :cta-list="ctaData.upperCtaList" />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import ctaContainer from '../molecule/cta-container'
+import ctaContainer from '@/components/molecule/cta-container'
+import ctaData from '@/data/cta.json'
 
 export default {
-  name: 'control-panel',
   components: {
     'ctaContainer': ctaContainer
   },
   data () {
     return {
-      togglesPanel: [
-        'Carte',
-        'Journal'
-      ],
-      actions: [
-        'Actions',
-        'Nord',
-        'Sac à dos',
-        'Ouest',
-        'Sud',
-        'Est'
-      ]
+      ctaData
     }
   }
 }

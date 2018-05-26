@@ -1,0 +1,54 @@
+{
+  "upperCtaList": [
+    {
+      "type": "ctaRouterLink",
+      "text": "Carte",
+      "routeLink": "map"
+    },
+    {
+      "type": "ctaRouterLink",
+      "text": "Journal",
+      "routeLink": "journal"
+    }
+  ],
+  
+  "lowerCtaList": [
+    {
+      "type": "ctaRouterLink",
+      "text": "Actions",
+      "routeLink": "actions"
+    },
+    {
+      "type": "ctaDirection",
+      "text": "Nord"
+    },
+    {
+      "type": "ctaRouterLink",
+      "text": "Inventaire",
+      "routeLink": "inventory"
+    },
+    {
+      "type": "ctaDirection",
+      "text": "Ouest"
+    },
+    {
+      "type": "ctaDirection",
+      "text": "Sud"
+    },
+    {
+      "type": "ctaDirection",
+      "text": "Est"
+    }
+  ],
+
+  "test": [
+    {
+      "type": "ctaDirection",
+      "text": "Test1"
+    },
+    {
+      "type": "ctaDirection",
+      "text": "Test2"
+    }
+  ]
+}
